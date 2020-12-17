@@ -1,0 +1,206 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="radixile-share-heading">Create or edit a Share</h2>
+
+            <div>
+                <radixile-alert-error></radixile-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_bcsCode">Bcs Code</label>
+                    <input type="text" class="form-control" name="bcsCode" id="field_bcsCode"
+                           formControlName="bcsCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_nseCode">Nse Code</label>
+                    <input type="text" class="form-control" name="nseCode" id="field_nseCode"
+                           formControlName="nseCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_industry">Industry</label>
+                    <input type="text" class="form-control" name="industry" id="field_industry"
+                           formControlName="industry"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_currentPrice">Current Price</label>
+                    <input type="text" class="form-control" name="currentPrice" id="field_currentPrice"
+                           formControlName="currentPrice"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_marketCapitalization">Market Capitalization</label>
+                    <input type="text" class="form-control" name="marketCapitalization" id="field_marketCapitalization"
+                           formControlName="marketCapitalization"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_priceToEarning">Price To Earning</label>
+                    <input type="text" class="form-control" name="priceToEarning" id="field_priceToEarning"
+                           formControlName="priceToEarning"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_debtToEquity">Debt To Equity</label>
+                    <input type="text" class="form-control" name="debtToEquity" id="field_debtToEquity"
+                           formControlName="debtToEquity"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_operatingCashFlow">Operating Cash Flow</label>
+                    <input type="text" class="form-control" name="operatingCashFlow" id="field_operatingCashFlow"
+                           formControlName="operatingCashFlow"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_sales">Sales</label>
+                    <input type="text" class="form-control" name="sales" id="field_sales"
+                           formControlName="sales"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_priceToBookValue">Price To Book Value</label>
+                    <input type="text" class="form-control" name="priceToBookValue" id="field_priceToBookValue"
+                           formControlName="priceToBookValue"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_returnOnCapitalEmployed">Return On Capital Employed</label>
+                    <input type="text" class="form-control" name="returnOnCapitalEmployed" id="field_returnOnCapitalEmployed"
+                           formControlName="returnOnCapitalEmployed"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_returnOnEquity">Return On Equity</label>
+                    <input type="text" class="form-control" name="returnOnEquity" id="field_returnOnEquity"
+                           formControlName="returnOnEquity"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_eps">Eps</label>
+                    <input type="text" class="form-control" name="eps" id="field_eps"
+                           formControlName="eps"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_promoterHolding">Promoter Holding</label>
+                    <input type="text" class="form-control" name="promoterHolding" id="field_promoterHolding"
+                           formControlName="promoterHolding"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_pledgedPercentage">Pledged Percentage</label>
+                    <input type="text" class="form-control" name="pledgedPercentage" id="field_pledgedPercentage"
+                           formControlName="pledgedPercentage"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_interestCoverageRatioPEGRatio">Interest Coverage Ratio PEG Ratio</label>
+                    <input type="text" class="form-control" name="interestCoverageRatioPEGRatio" id="field_interestCoverageRatioPEGRatio"
+                           formControlName="interestCoverageRatioPEGRatio"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_priceToFreeCashFlowSalesGrowth">Price To Free Cash Flow Sales Growth</label>
+                    <input type="text" class="form-control" name="priceToFreeCashFlowSalesGrowth" id="field_priceToFreeCashFlowSalesGrowth"
+                           formControlName="priceToFreeCashFlowSalesGrowth"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_salesGrowth">Sales Growth</label>
+                    <input type="text" class="form-control" name="salesGrowth" id="field_salesGrowth"
+                           formControlName="salesGrowth"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_profitGrowth3Years">Profit Growth 3 Years</label>
+                    <input type="text" class="form-control" name="profitGrowth3Years" id="field_profitGrowth3Years"
+                           formControlName="profitGrowth3Years"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_profitGrowth5Years">Profit Growth 5 Years</label>
+                    <input type="text" class="form-control" name="profitGrowth5Years" id="field_profitGrowth5Years"
+                           formControlName="profitGrowth5Years"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_averageReturnOnEquity3Years">Average Return On Equity 3 Years</label>
+                    <input type="text" class="form-control" name="averageReturnOnEquity3Years" id="field_averageReturnOnEquity3Years"
+                           formControlName="averageReturnOnEquity3Years"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dividendYield">Dividend Yield</label>
+                    <input type="text" class="form-control" name="dividendYield" id="field_dividendYield"
+                           formControlName="dividendYield"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_industryPE">Industry PE</label>
+                    <input type="text" class="form-control" name="industryPE" id="field_industryPE"
+                           formControlName="industryPE"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_freeCashFlow3Years">Free Cash Flow 3 Years</label>
+                    <input type="text" class="form-control" name="freeCashFlow3Years" id="field_freeCashFlow3Years"
+                           formControlName="freeCashFlow3Years"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_cashFromOperationsLastYear">Cash From Operations Last Year</label>
+                    <input type="text" class="form-control" name="cashFromOperationsLastYear" id="field_cashFromOperationsLastYear"
+                           formControlName="cashFromOperationsLastYear"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_freeCashFlowLastYear">Free Cash Flow Last Year</label>
+                    <input type="text" class="form-control" name="freeCashFlowLastYear" id="field_freeCashFlowLastYear"
+                           formControlName="freeCashFlowLastYear"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_opm">Opm</label>
+                    <input type="text" class="form-control" name="opm" id="field_opm"
+                           formControlName="opm"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_profitAfterTax">Profit After Tax</label>
+                    <input type="text" class="form-control" name="profitAfterTax" id="field_profitAfterTax"
+                           formControlName="profitAfterTax"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_eVEBITDA">E VEBITDA</label>
+                    <input type="text" class="form-control" name="eVEBITDA" id="field_eVEBITDA"
+                           formControlName="eVEBITDA"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

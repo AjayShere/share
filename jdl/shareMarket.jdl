@@ -1,0 +1,45 @@
+ 
+ 
+ 
+ 
+ entity Share{
+  
+    name String,
+    bcsCode String,
+    nseCode String,
+    industry  String,
+    currentPrice  String,
+    marketCapitalization  String,
+    priceToEarning String,
+    debtToEquity String,
+    operatingCashFlow String,
+    sales String,
+    priceToBookValue String,
+    returnOnCapitalEmployed String,
+    returnOnEquity String,
+    eps String,
+    promoterHolding String,
+    pledgedPercentage String,
+    interestCoverageRatioPEGRatio String,
+    
+    returnOnEquity String,
+    priceToFreeCashFlowSalesGrowth String,
+    salesGrowth String,
+    profitGrowth3Years String,
+    profitGrowth5Years String,
+    
+    averageReturnOnEquity3Years String,
+    dividendYield String,
+    industryPE String,
+    freeCashFlow3Years String,
+    cashFromOperationsLastYear String,
+    freeCashFlowLastYear String,
+    opm String,
+    profitAfterTax String,
+    eVEBITDA String
+    
+    
+    
+    
+    
+  }

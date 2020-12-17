@@ -1,0 +1,137 @@
+{
+  "name": "Share",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bcsCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nseCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "industry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "currentPrice",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marketCapitalization",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priceToEarning",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "debtToEquity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "operatingCashFlow",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sales",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priceToBookValue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "returnOnCapitalEmployed",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "returnOnEquity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eps",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "promoterHolding",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pledgedPercentage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "interestCoverageRatioPEGRatio",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priceToFreeCashFlowSalesGrowth",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "salesGrowth",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profitGrowth3Years",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profitGrowth5Years",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "averageReturnOnEquity3Years",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dividendYield",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "industryPE",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeCashFlow3Years",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cashFromOperationsLastYear",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "freeCashFlowLastYear",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "opm",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profitAfterTax",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eVEBITDA",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201216065323",
+  "entityTableName": "share",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,119 @@
+<div>
+    <h2 id="page-heading">
+        <span>Shares</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-share" [routerLink]="['/share/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span>
+            Create a new Share
+            </span>
+        </button>
+    </h2>
+
+    <radixile-alert-error></radixile-alert-error>
+
+    <radixile-alert></radixile-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="shares?.length === 0">
+        <span>No shares found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="shares && shares.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span>ID</span></th>
+                    <th scope="col" ><span>Name</span></th>
+                    <th scope="col" ><span>Bcs Code</span></th>
+                    <th scope="col" ><span>Nse Code</span></th>
+                    <th scope="col" ><span>Industry</span></th>
+                    <th scope="col" ><span>Current Price</span></th>
+                    <th scope="col" ><span>Market Capitalization</span></th>
+                    <th scope="col" ><span>Price To Earning</span></th>
+                    <th scope="col" ><span>Debt To Equity</span></th>
+                    <th scope="col" ><span>Operating Cash Flow</span></th>
+                    <th scope="col" ><span>Sales</span></th>
+                    <th scope="col" ><span>Price To Book Value</span></th>
+                    <th scope="col" ><span>Return On Capital Employed</span></th>
+                    <th scope="col" ><span>Return On Equity</span></th>
+                    <th scope="col" ><span>Eps</span></th>
+                    <th scope="col" ><span>Promoter Holding</span></th>
+                    <th scope="col" ><span>Pledged Percentage</span></th>
+                    <th scope="col" ><span>Interest Coverage Ratio PEG Ratio</span></th>
+                    <th scope="col" ><span>Price To Free Cash Flow Sales Growth</span></th>
+                    <th scope="col" ><span>Sales Growth</span></th>
+                    <th scope="col" ><span>Profit Growth 3 Years</span></th>
+                    <th scope="col" ><span>Profit Growth 5 Years</span></th>
+                    <th scope="col" ><span>Average Return On Equity 3 Years</span></th>
+                    <th scope="col" ><span>Dividend Yield</span></th>
+                    <th scope="col" ><span>Industry PE</span></th>
+                    <th scope="col" ><span>Free Cash Flow 3 Years</span></th>
+                    <th scope="col" ><span>Cash From Operations Last Year</span></th>
+                    <th scope="col" ><span>Free Cash Flow Last Year</span></th>
+                    <th scope="col" ><span>Opm</span></th>
+                    <th scope="col" ><span>Profit After Tax</span></th>
+                    <th scope="col" ><span>EVEBITDA</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let share of shares ;trackBy: trackId">
+                    <td><a [routerLink]="['/share', share.id, 'view']">{{ share.id }}</a></td>
+                    <td>{{ share.name }}</td>
+                    <td>{{ share.bcsCode }}</td>
+                    <td>{{ share.nseCode }}</td>
+                    <td>{{ share.industry }}</td>
+                    <td>{{ share.currentPrice }}</td>
+                    <td>{{ share.marketCapitalization }}</td>
+                    <td>{{ share.priceToEarning }}</td>
+                    <td>{{ share.debtToEquity }}</td>
+                    <td>{{ share.operatingCashFlow }}</td>
+                    <td>{{ share.sales }}</td>
+                    <td>{{ share.priceToBookValue }}</td>
+                    <td>{{ share.returnOnCapitalEmployed }}</td>
+                    <td>{{ share.returnOnEquity }}</td>
+                    <td>{{ share.eps }}</td>
+                    <td>{{ share.promoterHolding }}</td>
+                    <td>{{ share.pledgedPercentage }}</td>
+                    <td>{{ share.interestCoverageRatioPEGRatio }}</td>
+                    <td>{{ share.priceToFreeCashFlowSalesGrowth }}</td>
+                    <td>{{ share.salesGrowth }}</td>
+                    <td>{{ share.profitGrowth3Years }}</td>
+                    <td>{{ share.profitGrowth5Years }}</td>
+                    <td>{{ share.averageReturnOnEquity3Years }}</td>
+                    <td>{{ share.dividendYield }}</td>
+                    <td>{{ share.industryPE }}</td>
+                    <td>{{ share.freeCashFlow3Years }}</td>
+                    <td>{{ share.cashFromOperationsLastYear }}</td>
+                    <td>{{ share.freeCashFlowLastYear }}</td>
+                    <td>{{ share.opm }}</td>
+                    <td>{{ share.profitAfterTax }}</td>
+                    <td>{{ share.eVEBITDA }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/share', share.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline">View</span>
+                            </button>
+
+                            <!-- <button type="submit"
+                                    [routerLink]="['/share', share.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(share)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Delete</span>
+                            </button> -->
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

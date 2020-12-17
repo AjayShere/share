@@ -1,0 +1,146 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="share">
+            <h2><span>Share</span> {{ share.id }}</h2>
+
+            <hr>
+
+            <radixile-alert-error></radixile-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{ share.name }}</span>
+                </dd>
+                <dt><span>Bcs Code</span></dt>
+                <dd>
+                    <span>{{ share.bcsCode }}</span>
+                </dd>
+                <dt><span>Nse Code</span></dt>
+                <dd>
+                    <span>{{ share.nseCode }}</span>
+                </dd>
+                <dt><span>Industry</span></dt>
+                <dd>
+                    <span>{{ share.industry }}</span>
+                </dd>
+                <dt><span>Current Price</span></dt>
+                <dd>
+                    <span>{{ share.currentPrice }}</span>
+                </dd>
+                <dt><span>Market Capitalization</span></dt>
+                <dd>
+                    <span>{{ share.marketCapitalization }}</span>
+                </dd>
+                <dt><span>Price To Earning</span></dt>
+                <dd>
+                    <span>{{ share.priceToEarning }}</span>
+                </dd>
+                <dt><span>Debt To Equity</span></dt>
+                <dd>
+                    <span>{{ share.debtToEquity }}</span>
+                </dd>
+                <dt><span>Operating Cash Flow</span></dt>
+                <dd>
+                    <span>{{ share.operatingCashFlow }}</span>
+                </dd>
+                <dt><span>Sales</span></dt>
+                <dd>
+                    <span>{{ share.sales }}</span>
+                </dd>
+                <dt><span>Price To Book Value</span></dt>
+                <dd>
+                    <span>{{ share.priceToBookValue }}</span>
+                </dd>
+                <dt><span>Return On Capital Employed</span></dt>
+                <dd>
+                    <span>{{ share.returnOnCapitalEmployed }}</span>
+                </dd>
+                <dt><span>Return On Equity</span></dt>
+                <dd>
+                    <span>{{ share.returnOnEquity }}</span>
+                </dd>
+                <dt><span>Eps</span></dt>
+                <dd>
+                    <span>{{ share.eps }}</span>
+                </dd>
+                <dt><span>Promoter Holding</span></dt>
+                <dd>
+                    <span>{{ share.promoterHolding }}</span>
+                </dd>
+                <dt><span>Pledged Percentage</span></dt>
+                <dd>
+                    <span>{{ share.pledgedPercentage }}</span>
+                </dd>
+                <dt><span>Interest Coverage Ratio PEG Ratio</span></dt>
+                <dd>
+                    <span>{{ share.interestCoverageRatioPEGRatio }}</span>
+                </dd>
+                <dt><span>Price To Free Cash Flow Sales Growth</span></dt>
+                <dd>
+                    <span>{{ share.priceToFreeCashFlowSalesGrowth }}</span>
+                </dd>
+                <dt><span>Sales Growth</span></dt>
+                <dd>
+                    <span>{{ share.salesGrowth }}</span>
+                </dd>
+                <dt><span>Profit Growth 3 Years</span></dt>
+                <dd>
+                    <span>{{ share.profitGrowth3Years }}</span>
+                </dd>
+                <dt><span>Profit Growth 5 Years</span></dt>
+                <dd>
+                    <span>{{ share.profitGrowth5Years }}</span>
+                </dd>
+                <dt><span>Average Return On Equity 3 Years</span></dt>
+                <dd>
+                    <span>{{ share.averageReturnOnEquity3Years }}</span>
+                </dd>
+                <dt><span>Dividend Yield</span></dt>
+                <dd>
+                    <span>{{ share.dividendYield }}</span>
+                </dd>
+                <dt><span>Industry PE</span></dt>
+                <dd>
+                    <span>{{ share.industryPE }}</span>
+                </dd>
+                <dt><span>Free Cash Flow 3 Years</span></dt>
+                <dd>
+                    <span>{{ share.freeCashFlow3Years }}</span>
+                </dd>
+                <dt><span>Cash From Operations Last Year</span></dt>
+                <dd>
+                    <span>{{ share.cashFromOperationsLastYear }}</span>
+                </dd>
+                <dt><span>Free Cash Flow Last Year</span></dt>
+                <dd>
+                    <span>{{ share.freeCashFlowLastYear }}</span>
+                </dd>
+                <dt><span>Opm</span></dt>
+                <dd>
+                    <span>{{ share.opm }}</span>
+                </dd>
+                <dt><span>Profit After Tax</span></dt>
+                <dd>
+                    <span>{{ share.profitAfterTax }}</span>
+                </dd>
+                <dt><span>E VEBITDA</span></dt>
+                <dd>
+                    <span>{{ share.eVEBITDA }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/share', share.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

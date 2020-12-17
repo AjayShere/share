@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity Share.
+    -->
+    <changeSet id="20201216065323-1" author="jhipster">
+        <createTable tableName="share">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="bcs_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="nse_code" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="industry" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="current_price" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="market_capitalization" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="price_to_earning" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="debt_to_equity" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="operating_cash_flow" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sales" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="price_to_book_value" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="return_on_capital_employed" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="return_on_equity" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="eps" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="promoter_holding" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pledged_percentage" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="interest_coverage_ratio_peg_ratio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="price_to_free_cash_flow_sales_growth" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sales_growth" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="profit_growth_3_years" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="profit_growth_5_years" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="average_return_on_equity_3_years" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="dividend_yield" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="industry_pe" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="free_cash_flow_3_years" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cash_from_operations_last_year" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="free_cash_flow_last_year" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="opm" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="profit_after_tax" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="e_vebitda" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20201216065323-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20201216065323-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/share.csv"
+                  separator=";"
+                  tableName="share">
+            <column name="id" type="numeric"/>
+            <column name="name" type="string"/>
+            <column name="bcs_code" type="string"/>
+            <column name="nse_code" type="string"/>
+            <column name="industry" type="string"/>
+            <column name="current_price" type="string"/>
+            <column name="market_capitalization" type="string"/>
+            <column name="price_to_earning" type="string"/>
+            <column name="debt_to_equity" type="string"/>
+            <column name="operating_cash_flow" type="string"/>
+            <column name="sales" type="string"/>
+            <column name="price_to_book_value" type="string"/>
+            <column name="return_on_capital_employed" type="string"/>
+            <column name="return_on_equity" type="string"/>
+            <column name="eps" type="string"/>
+            <column name="promoter_holding" type="string"/>
+            <column name="pledged_percentage" type="string"/>
+            <column name="interest_coverage_ratio_peg_ratio" type="string"/>
+            <column name="price_to_free_cash_flow_sales_growth" type="string"/>
+            <column name="sales_growth" type="string"/>
+            <column name="profit_growth_3_years" type="string"/>
+            <column name="profit_growth_5_years" type="string"/>
+            <column name="average_return_on_equity_3_years" type="string"/>
+            <column name="dividend_yield" type="string"/>
+            <column name="industry_pe" type="string"/>
+            <column name="free_cash_flow_3_years" type="string"/>
+            <column name="cash_from_operations_last_year" type="string"/>
+            <column name="free_cash_flow_last_year" type="string"/>
+            <column name="opm" type="string"/>
+            <column name="profit_after_tax" type="string"/>
+            <column name="e_vebitda" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
